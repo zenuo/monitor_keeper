@@ -1,6 +1,7 @@
 ## monitor keeper
 
-一个滚动清除监控视频的工具
+## 是什么
+存储监控视频到硬盘中，当硬盘占用达到某个设定的阈值时，删除最早的视频以满足这个阈值
 
 ## 构建
 
@@ -16,6 +17,7 @@ mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=MinSizeRel -DSPDLOG_FMT_EXTE
 ```
 
 ## 附带脚本
+todo
 
 ## 参考
 
