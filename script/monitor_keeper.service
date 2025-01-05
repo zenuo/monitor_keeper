@@ -1,0 +1,10 @@
+[Unit]
+Description=clear monitor videos when disk almost full
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/app/monitor_keeper
+ExecStart=./monitor_keeper config.json
+
+[Install]
+WantedBy=multi-user.target

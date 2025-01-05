@@ -1,0 +1,11 @@
+[Unit]
+Description=Run monitor_keeper.service everyday
+
+[Timer]
+Unit=monitor_keeper.service
+OnBootSec=5min
+OnUnitActiveSec=24h
+OnCalendar=*-*-* 10:17:17
+
+[Install]
+WantedBy=timers.target

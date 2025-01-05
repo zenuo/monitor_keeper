@@ -1,0 +1,23 @@
+[Unit]
+Description=monitor_dump
+Documentation=监控视频流并保存到本地
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/tmp/monitor_dump.pid
+GuessMainPID = true
+
+Environment="MONITOR_DUMP_URL=rtsp://user:pass@xxx.xxx.xxx.xxx:554/stream1"
+
+WorkingDirectory=/mnt/monitor_dump
+ExecStart=/usr/bin/bash bin/start.sh
+
+Restart=on-failure
+StartLimitBurst=3
+StartLimitInterval=120s
+
+User=nobody
+
+[Install]
+WantedBy=multi-user.target

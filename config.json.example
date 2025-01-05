@@ -1,0 +1,7 @@
+{
+  "videoFilePaths": [
+      "/mnt/videos"
+  ],
+  "diskKeepPercent":70,
+  "dryRun": true
+}
